@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-import { ArrowRight, BookOpen, Briefcase, GraduationCap, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, GraduationCap } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {

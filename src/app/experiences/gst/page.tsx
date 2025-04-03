@@ -19,7 +19,7 @@ export default function GSTExperiencePage() {
             <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Returns</span>
           </div>
           <p className="text-xl text-gray-600">
-            Gain insights into the practical aspects of GST compliance, return filing, and reconciliation processes that you'll encounter during your articleship.
+            Gain insights into the practical aspects of GST compliance, return filing, and reconciliation processes that you&apos;ll encounter during your articleship.
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export default function GSTExperiencePage() {
         <section className="bg-white rounded-xl shadow-sm p-8 mb-10">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Overview</h2>
           <p className="text-gray-700 mb-4">
-            Goods and Services Tax (GST) is a comprehensive indirect tax levied on the supply of goods and services across India. As a CA article, you'll likely spend significant time working on GST-related matters, from monthly return filing to complex reconciliations and departmental assessments.
+            Goods and Services Tax (GST) is a comprehensive indirect tax levied on the supply of goods and services across India. As a CA article, you&apos;ll likely spend significant time working on GST-related matters, from monthly return filing to complex reconciliations and departmental assessments.
           </p>
           <p className="text-gray-700 mb-4">
             During your articleship, you may be responsible for:

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ChevronRight, BookOpen, GraduationCap, Briefcase, Award, FileCheck } from "lucide-react";
 import Link from "next/link";
+import { LucideIcon } from "lucide-react";
 
 export default function JourneyPage() {
   return (
@@ -84,7 +85,7 @@ function TimelineItem({
 }: { 
   title: string; 
   description: string; 
-  icon: any; 
+  icon: LucideIcon; 
   points: string[]; 
   isLeft: boolean; 
   buttonText: string; 

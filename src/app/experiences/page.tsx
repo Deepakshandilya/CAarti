@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Search, Filter } from 'lucide-react';
+import { ArrowRight, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function ExperiencesPage() {
@@ -101,7 +101,7 @@ export default function ExperiencesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-blue-50 rounded-lg p-6">
-                <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-gray-700 italic mb-4">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-blue-200 flex items-center justify-center text-blue-700 font-semibold">
                     {testimonial.name.charAt(0)}
@@ -118,8 +118,8 @@ export default function ExperiencesPage() {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Can't Find What You're Looking For?</h2>
-          <p className="text-gray-600 mb-6">Reach out to us and we'll help guide you in the right direction</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Can&apos;t Find What You&apos;re Looking For?</h2>
+          <p className="text-gray-600 mb-6">Reach out to us and we&apos;ll help guide you in the right direction</p>
           <Link href="/about#contact">
             <span className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
               Contact Us
