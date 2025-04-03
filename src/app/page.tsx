@@ -1,103 +1,153 @@
-import Image from "next/image";
+import HeroSection from "@/components/HeroSection";
+import { ArrowRight, BookOpen, Briefcase, GraduationCap, Users } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col min-h-screen">
+      <HeroSection />
+      
+      {/* Journey Stages Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The CA Journey Roadmap</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Understand the complete path to becoming a Chartered Accountant, with insights at each stage of the journey
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Foundation */}
+            <div className="bg-blue-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <GraduationCap className="h-8 w-8 text-blue-700" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Foundation & Intermediate</h3>
+              <p className="text-gray-600 mb-6">
+                Master the fundamental concepts and build a strong base for your CA career
+              </p>
+              <Link href="/journey/foundation-intermediate" className="inline-flex items-center text-blue-700 font-medium hover:text-blue-900">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+            
+            {/* Articleship */}
+            <div className="bg-blue-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <Briefcase className="h-8 w-8 text-blue-700" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Articleship Experience</h3>
+              <p className="text-gray-600 mb-6">
+                Gain practical knowledge and hands-on experience across various domains of accounting
+              </p>
+              <Link href="/experiences" className="inline-flex items-center text-blue-700 font-medium hover:text-blue-900">
+                Explore experiences <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+            
+            {/* Final & Professional */}
+            <div className="bg-blue-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                <BookOpen className="h-8 w-8 text-blue-700" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Final & Professional Career</h3>
+              <p className="text-gray-600 mb-6">
+                Complete your exams and transition into a fulfilling professional career
+              </p>
+              <Link href="/journey/final-professional" className="inline-flex items-center text-blue-700 font-medium hover:text-blue-900">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      
+      {/* Experience Areas Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Diverse Experience Areas</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore different domains of work that chartered accountants encounter during articleship and beyond
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {experienceAreas.map((area) => (
+              <Link key={area.title} href={area.href} className="group">
+                <div className="bg-white rounded-xl p-6 shadow-sm group-hover:shadow-md transition-shadow h-full flex flex-col">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+                    {area.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm flex-grow">{area.description}</p>
+                  <div className="mt-4 text-blue-600 group-hover:text-blue-800 flex items-center text-sm font-medium">
+                    Read more <ArrowRight className="ml-1 h-3 w-3" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Call to Action */}
+      <section className="py-16 bg-blue-800 text-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Excel in Your CA Journey?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join thousands of aspiring CAs who use our resources to navigate their path to success
+          </p>
+          <Link href="/resources">
+            <span className="inline-block px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+              Access Free Resources
+            </span>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
+
+const experienceAreas = [
+  {
+    title: "GST Compliance",
+    description: "Learn about filing returns, reconciliations, assessments and handling GST audits",
+    href: "/experiences/gst"
+  },
+  {
+    title: "Bank Audit",
+    description: "Understand the nuances of auditing banking operations, loans, advances and financial reporting",
+    href: "/experiences/bank-audit"
+  },
+  {
+    title: "Industry Audit",
+    description: "Explore various types of industry-specific audits and their unique requirements",
+    href: "/experiences/industry-audit"
+  },
+  {
+    title: "Tax Planning & Assessment",
+    description: "Master the skills of tax assessment, planning and representation for individuals and businesses",
+    href: "/experiences/tax"
+  },
+  {
+    title: "Statutory Compliance",
+    description: "Navigate through various statutory requirements, ROC filings and legal compliances",
+    href: "/experiences/statutory-compliance"
+  },
+  {
+    title: "Internal Audit",
+    description: "Learn methodologies for evaluating internal controls and improving business processes",
+    href: "/experiences/internal-audit"
+  },
+  {
+    title: "Financial Management",
+    description: "Understand financial analysis, planning, and strategic decision-making processes",
+    href: "/experiences/financial-management"
+  },
+  {
+    title: "Corporate Finance",
+    description: "Explore valuation, mergers & acquisitions, and corporate restructuring",
+    href: "/experiences/corporate-finance"
+  }
+];
