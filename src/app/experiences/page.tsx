@@ -163,7 +163,7 @@ const categories = [
   { label: 'Finance', value: 'finance' }
 ];
 
-const categoryColors = {
+const categoryColors: Record<string, string> = {
   'auditing': 'bg-blue-500',
   'taxation': 'bg-green-500',
   'compliance': 'bg-purple-500',
